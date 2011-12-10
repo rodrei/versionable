@@ -1,6 +1,6 @@
 h1. Versionable
 
-This Gem provides a way of working with "semantic version numbers":http://semver.org/ in ActiveRecord models.
+This Gem provides a way to work with "semantic version numbers":http://semver.org/ in ActiveRecord models.
 
 h2. Installation
 
@@ -12,7 +12,7 @@ Add the following line to your Gemfile and run the @bundle@ command to install i
 
 h2. Usage
 
-Just call @version_field@ from within an ActiveRecord model class and pass the name of the field to be used as a version number. This field must be of type @Float@.
+Call @version_field@ from within an ActiveRecord model class and pass the name of the field to be used as a version number. This field must be of type @Float@.
 
 <pre>
   class Release < ActiveRecord::Base
@@ -22,7 +22,7 @@ Just call @version_field@ from within an ActiveRecord model class and pass the n
 
 Versionable now will setup a wrapper around the @version@ field.
 
-* Assigning and retrieving can be done as if the version field is a simple string:
+* Assigning and retrieving can be done as if the version field were a string:
 
 <pre>
   release.version = '1.2.34'
@@ -41,7 +41,7 @@ Versionable now will setup a wrapper around the @version@ field.
 
 h2. How does it work?
 
-Versionable internally stores the version numbers as float, using the following simple rule:
+Versionable internally stores the version number as float using the following simple rule:
 
 _Version X.Y.Z is saved internally as the float value x.xxyyyzzz._
 
